@@ -12,9 +12,10 @@
     #content {padding:0px 10px 0px 10px}
     #r-col {float:right; width:650px; height:700px; border:1px solid #000000; padding:20px;}
     #l-col {float:left; width:250px; height:700px; border:1px solid #000000; padding:20px;}
-    #profile {clear:both; padding:10px 10px 10px 10px; background:#ff000c; height:230px}
+    #profile {clear:both; padding:10px 10px 10px 10px; height:230px}
     #sub-feed{background:#aaf4f7; height:430px;}
     #sub-feed ul {margin:0; padding:0px; list-style-type:none;}
     #sub-feed ul li {padding:10px; 10px; 0px; 10px;}
     #foot {clear:both; padding:20px; background:#d1d1d1;}
+    img   {padding:0px;}
 </style>
