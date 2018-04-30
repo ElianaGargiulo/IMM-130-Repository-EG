@@ -1,30 +1,91 @@
 <style>
-    html {color:#100;}
+    html {color:#100; }
     body {background:#dbdbdb; margin:0}
-    #page {width:1024px; margin:0 auto; background:#ffffff;}
-    #head {width:100%; height:75px; border-bottom:1px solid #000000; background:#7c7c7c;}
-    #site-logo {float:left; width:65px; height:30px; margin:10px; background:#ff000c;}
+    #page {width:100%; margin:0 auto; background:#e5dcdc;}
+    #head {width:100%; height:75px; border-bottom:1px solid #000000; background:#ff3060;}
+    #site-logo {float:left; width:65px; height:30px; margin:10px; color:#6dad7a; font-weight: bold; font-size:20px;}
     #search-bar {float:right; width:450px;}
-    #nav {height:30px; clear:both; background:#d1d1d1; border-bottom:1px solid #000000;}
+    #nav {height:30px; clear:both; background:#ff87a2; padding-bottom: 2px;}
     #nav ul {margin:0; padding:0px; list-style-type:none;}
-    #nav ul li {float:left; padding:10px;}
-    #nav ul li a {font:15px; float:left; padding: 0px 0px 0px 192px; display:block;}
-    #content {padding:0px 10px 0px 10px}
-    #r-col {float:right; width:650px; height:700px; border:1px solid #000000; padding:20px;}
-    #l-col {float:left; width:250px; height:700px; border:1px solid #000000; padding:20px;}
-    #col {clear:both; width:960px; height:600px; border:1px solid #000000; padding:20px;}
-    #profile {clear:both; padding:10px 10px 10px 10px; height:230px}
-    #sub-feed{background:#aaf4f7; height:430px;}
+    #nav ul li {float:left; padding:10px; padding-left: 60px}
+    #nav ul li a {font:15px; float:left; padding: 0px 0px 0px 260px; display:block; text-decoration: none; color:white; font-weight: bold; font-size: 16; font-family: sans-serif}
+    #content {margin:0 auto; width:1024px; padding:0px 3px 0px 3px}
+    #r-col {float:right; width:700px; height:700px;}
+    #feed {height:675px; background:#fff; border-bottom-left-radius: 25px; border-bottom-right-radius: 25px; border-top-left-radius: 10px; border-top-right-radius: 10px;}
+    #col-content {height:500px; background:#fff; padding-top: 15px; border-radius: 25px; padding-left: 50px; padding-right: 50px}
+    #l-col {float:left; width:280px; height:700px; } 
+    #create {height:125px; border-bottom:2px solid #e5dcdc; border-radius: 15px;}
+    #create textarea {width:85%; height:70px; margin-left:50px; margin-top:10px;}
+    #create input {margin-left: 600px;}
+    #post {clear:both; border-bottom:1px solid #e5dcdc; height: 60px; padding:10px 10px 10px 10px; border-radius: 10px;}
+    #post-user a:link {text-decoration: none; font-weight: bold; color:black}
+    #post-user a:visited {text-decoration: none; font-weight: bold; color:black}
+    #post-user a:hover    {text-decoration: underline; font-weight: bold; color:black}
+    #post-img {float:left; width:60px;}
+    #post-user {font-weight: bold; float:right; display:block; height:20px; width:600px;}
+    #post-content { float:right; display:block; height:20px; width:600px;}
+    #post-info { float:right; display:block; height:20px; width:600px; text-align: right; font-size:12px; color:grey}
+    #post-load {text-align: center; margin-top:20px;}
+    #post-load a:link{text-decoration: none; font-weight: bold;}
+    #post-load a:hover{text-decoration: underline; font-weight: bold;}
+    #post-load a:visited{text-decoration: none; font-weight: bold; color: blue}
+    #col {clear:both; width:960px; height:600px; padding:10px; margin-top: 10px}
+    #profile {clear:both; margin-bottom: 10px padding:20px; background:#fff; height:200px; border-radius: 10px;}
+    #profile-img {float:left; margin:5px}
+    #profile-info {float:right; margin:5px; margin-top:20px}
+    #profile-info h3{margin:0; padding:0;}
+    #profile-info p{color:#a8a8a8;}
+    #profile-extra {height:50px; clear:both; width:100px; margin: 0 auto; text-align: center;}
+    #profile a:link {text-decoration: none; font-weight: bold;}
+    #profile a:visited {text-decoration: none; font-weight: bold; color:black}
+    #profile a:hover    {text-decoration: underline; font-weight: bold; color:black}
+    #sub-feed{margin-top: 10px; height:425px; background:#fff; border-radius: 10px; text-align: center;}
+    #sub-feed a:link {text-decoration: none; font-weight: bold; color:blue}
+    #sub-feed a:hover {text-decoration: underline;}
+    #sub-feed a:visited {text-decoration: none; font-weight: bold; color:blue}
     #sub-feed ul {margin:0; padding:0px; list-style-type:none;}
     #sub-feed ul li {padding:10px; 10px; 0px; 10px;}
-    #foot {clear:both; padding:20px; background:#d1d1d1;}
-    img   {padding:0px;}
+    #blog-feed{margin-top: 0px; height:425px; background:#fff; border-radius: 10px; text-align: center;}
+    #blog-feed a:link {text-decoration: none; font-weight: bold; color:blue}
+    #blog-feed a:hover {text-decoration: underline;}
+    #blog-feed a:visited {text-decoration: none; font-weight: bold; color:blue}
+    #blog-feed ul {margin:0; padding:0px; list-style-type:none;}
+    #blog-feed ul li {padding:10px; 10px; 0px; 10px;}
+    #foot {clear:both; padding:20px; background:#ff3060 ;}
+    img.round{border-radius: 25px;}
+    img.round-small{border-radius: 10px;}
+    #profile-banner{
+    clear:both;
+    margin:0 auto;
+    margin-bottom: 10px;
+    width:1024px;
+    height:150px;
+    background:#fff;
+    border-radius:25px;
+    padding:20px;
+    }
+    #banner-img{
+        float:left;
+        width:100px;
+        height:110px;
+    }
+    #banner-name{
+        font-weight: bold; float:right; display:block; height:20px; width:850px; font-size: 30px; padding-bottom: 15px;
+    }
+    #banner-desc{
+        float:right; display:block; height:50px; width:850px; font-style: italic; color:gray; padding-bottom: 20px;
+    }
+    #banner-stats{
+        float:right; display:block; height:20px; width:600px; text-align: right; font-size:12px; color:grey
+    }
+
     .dropbtn {
-    background-color: #4CAF50;
+    background-color: #ff87a2;
     color: white;
     font-size: 16px;
     border: none;
     cursor: pointer;
+    font-weight: bold;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -62,7 +123,7 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+    background-color: #ff87a2;
 }
 
 
